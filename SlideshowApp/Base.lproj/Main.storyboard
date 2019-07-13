@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv2-Cq-o72">
+                                <rect key="frame" x="0.0" y="1300" width="0.0" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hrG-Gj-ceB"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="進む" id="Gof-0a-Fna">
+                                        <connections>
+                                            <action selector="advance:" destination="BYZ-38-t0r" id="huJ-nI-YhD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="戻る" id="CtF-Bh-45H">
+                                        <connections>
+                                            <action selector="return:" destination="BYZ-38-t0r" id="Gxg-Om-O07"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="再生" id="6EG-f7-GXr">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="ebg-S8-JIj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illust3" translatesAutoresizingMaskIntoConstraints="NO" id="3t2-Tp-BHS">
+                                <rect key="frame" x="10" y="54" width="180" height="1764"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3t2-Tp-BHS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1P0-N0-Q8d"/>
+                            <constraint firstItem="Lv2-Cq-o72" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="57C-PZ-ec6"/>
+                            <constraint firstItem="Lv2-Cq-o72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYQ-oU-mud"/>
+                            <constraint firstItem="Lv2-Cq-o72" firstAttribute="top" secondItem="3t2-Tp-BHS" secondAttribute="bottom" constant="10" id="Jsy-bY-g9g"/>
+                            <constraint firstAttribute="trailing" secondItem="3t2-Tp-BHS" secondAttribute="trailing" constant="10" id="P1a-DD-usg"/>
+                            <constraint firstItem="3t2-Tp-BHS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ihF-W0-a1A"/>
+                            <constraint firstItem="Lv2-Cq-o72" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pif-bX-QEN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="138.38028169014083"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="illust3" width="640" height="427"/>
+    </resources>
 </document>

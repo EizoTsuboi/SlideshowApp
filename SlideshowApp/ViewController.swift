@@ -16,5 +16,11 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func advance(_ sender: Any) {
+    }
+    @IBAction func `return`(_ sender: Any) {
+    }
+    @IBAction func play(_ sender: Any) {
+    }
 }
 
