@@ -12,6 +12,7 @@
 		662DEE3622D966BF00261D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662DEE3422D966BF00261D7D /* Main.storyboard */; };
 		662DEE3822D966C400261D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662DEE3722D966C400261D7D /* Assets.xcassets */; };
 		662DEE3B22D966C400261D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662DEE3922D966C400261D7D /* LaunchScreen.storyboard */; };
+		66EE6F6F22DB5D3500C199F2 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE6F6E22DB5D3500C199F2 /* ScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		662DEE3722D966C400261D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662DEE3A22D966C400261D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662DEE3C22D966C400261D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66EE6F6E22DB5D3500C199F2 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				662DEE3022D966BF00261D7D /* AppDelegate.swift */,
 				662DEE3222D966BF00261D7D /* ViewController.swift */,
+				66EE6F6E22DB5D3500C199F2 /* ScreenViewController.swift */,
 				662DEE3422D966BF00261D7D /* Main.storyboard */,
 				662DEE3722D966C400261D7D /* Assets.xcassets */,
 				662DEE3922D966C400261D7D /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				662DEE3322D966BF00261D7D /* ViewController.swift in Sources */,
 				662DEE3122D966BF00261D7D /* AppDelegate.swift in Sources */,
+				66EE6F6F22DB5D3500C199F2 /* ScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv2-Cq-o72">
-                                <rect key="frame" x="0.0" y="1300" width="0.0" height="44"/>
+                                <rect key="frame" x="44" y="349" width="808" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="hrG-Gj-ceB"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="戻る" id="CtF-Bh-45H">
                                         <connections>
-                                            <action selector="return:" destination="BYZ-38-t0r" id="Gxg-Om-O07"/>
+                                            <action selector="imagereturn:" destination="BYZ-38-t0r" id="5rh-nG-ecC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="再生" id="6EG-f7-GXr">
@@ -42,25 +42,98 @@
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illust3" translatesAutoresizingMaskIntoConstraints="NO" id="3t2-Tp-BHS">
-                                <rect key="frame" x="10" y="54" width="180" height="1764"/>
+                                <rect key="frame" x="10" y="10" width="876" height="333"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zo7-PC-adb">
+                                <rect key="frame" x="0.0" y="1" width="876" height="333"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xrN-wa-P0P" appends="YES" id="HUy-Fu-32h"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3t2-Tp-BHS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1P0-N0-Q8d"/>
                             <constraint firstItem="Lv2-Cq-o72" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="57C-PZ-ec6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3t2-Tp-BHS" secondAttribute="bottom" constant="50" id="BX7-UR-ezI"/>
+                            <constraint firstItem="Zo7-PC-adb" firstAttribute="trailing" secondItem="3t2-Tp-BHS" secondAttribute="trailing" id="BaL-M2-a0H"/>
                             <constraint firstItem="Lv2-Cq-o72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYQ-oU-mud"/>
-                            <constraint firstItem="Lv2-Cq-o72" firstAttribute="top" secondItem="3t2-Tp-BHS" secondAttribute="bottom" constant="10" id="Jsy-bY-g9g"/>
+                            <constraint firstItem="Zo7-PC-adb" firstAttribute="top" secondItem="3t2-Tp-BHS" secondAttribute="top" id="Ghb-ia-djO"/>
                             <constraint firstAttribute="trailing" secondItem="3t2-Tp-BHS" secondAttribute="trailing" constant="10" id="P1a-DD-usg"/>
+                            <constraint firstItem="Zo7-PC-adb" firstAttribute="bottom" secondItem="3t2-Tp-BHS" secondAttribute="bottom" id="Q4V-0Q-AQD"/>
                             <constraint firstItem="3t2-Tp-BHS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ihF-W0-a1A"/>
                             <constraint firstItem="Lv2-Cq-o72" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pif-bX-QEN"/>
+                            <constraint firstItem="Zo7-PC-adb" firstAttribute="leading" secondItem="3t2-Tp-BHS" secondAttribute="leading" id="qEa-sd-4yO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="advance" destination="Gof-0a-Fna" id="tl9-Gn-JaT"/>
+                        <outlet property="myimageview" destination="3t2-Tp-BHS" id="q4U-Yz-sHA"/>
+                        <outlet property="return" destination="CtF-Bh-45H" id="0Db-yF-0sK"/>
+                        <outlet property="slidebutton" destination="6EG-f7-GXr" id="fqc-OH-ZS4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xrN-wa-P0P">
+                    <connections>
+                        <segue destination="sUb-v6-QUi" kind="show" id="Hnv-Q3-1dY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="138.75" y="138.38028169014083"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Screen View Controller-->
+        <scene sceneID="1hD-xo-jvG">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="sUb-v6-QUi" customClass="ScreenViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b9G-uz-Hvn">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-ZS-WYm">
+                                <rect key="frame" x="44" y="349" width="808" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="iaG-vV-70j"/>
+                                    <constraint firstAttribute="height" constant="44" id="rQd-m1-7x7"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2EM-GF-mzC"/>
+                                    <barButtonItem title="戻る" id="a3A-cr-gTh">
+                                        <connections>
+                                            <segue destination="JRV-4E-eKb" kind="unwind" unwindAction="unwind:" id="3V8-O7-Vyv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uTg-ZC-he1">
+                                <rect key="frame" x="44" y="0.0" width="808" height="349"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WF9-ZS-WYm" firstAttribute="bottom" secondItem="ozD-Il-fTc" secondAttribute="bottom" id="CrB-nx-98f"/>
+                            <constraint firstItem="uTg-ZC-he1" firstAttribute="top" secondItem="ozD-Il-fTc" secondAttribute="top" id="DzM-A6-cQy"/>
+                            <constraint firstItem="uTg-ZC-he1" firstAttribute="leading" secondItem="ozD-Il-fTc" secondAttribute="leading" id="XSm-hE-kYU"/>
+                            <constraint firstItem="ozD-Il-fTc" firstAttribute="trailing" secondItem="WF9-ZS-WYm" secondAttribute="trailing" id="lTx-JG-gKl"/>
+                            <constraint firstItem="WF9-ZS-WYm" firstAttribute="leading" secondItem="ozD-Il-fTc" secondAttribute="leading" id="q0W-FE-hv6"/>
+                            <constraint firstItem="ozD-Il-fTc" firstAttribute="trailing" secondItem="uTg-ZC-he1" secondAttribute="trailing" id="r3L-gM-shX"/>
+                            <constraint firstItem="WF9-ZS-WYm" firstAttribute="top" secondItem="uTg-ZC-he1" secondAttribute="bottom" id="rDU-2h-zUX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ozD-Il-fTc"/>
+                    </view>
+                    <connections>
+                        <outlet property="screenview" destination="uTg-ZC-he1" id="pXi-JR-Zaj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhw-XV-EU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JRV-4E-eKb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="856.52173913043487" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
